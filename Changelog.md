@@ -1,5 +1,17 @@
 # Changelog
 
+0.0.5 - Jul 19, 2019
+
+* Add TTY Gems
+
+[Full Changelog](https://github.com/capyba/capyba/compare/v0.0.4...v0.0.5)
+
+0.0.4 - Jul 19, 2019
+
+* Refactor Environment Configuration
+
+[Full Changelog](https://github.com/capyba/capyba/compare/v0.0.3...v0.0.4)
+
 0.0.3 - Jul 19, 2019
 
 * Add Environment Key Variables configuration
