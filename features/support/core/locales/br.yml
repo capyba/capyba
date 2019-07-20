@@ -1,0 +1,5 @@
+br:
+  test: "Isto é um teste"
+  success:
+    'true':
+      'cav': 'Real'

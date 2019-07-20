@@ -60,6 +60,10 @@ module Modules
     def host
       Modules.check_env_keys(:app_host, 'http://localhost', AppModule)
     end
+
+    def lang
+      Modules.check_env_keys(:app_lang, 'en', AppModule)
+    end
   end
 
   # BrowserModule
