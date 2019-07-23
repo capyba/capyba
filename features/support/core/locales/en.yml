@@ -1,2 +1,5 @@
 en:
-  test: "This is a test"
+  database:
+    error_message:
+      driver:
+        unsupported: 'The entered Database Driver is not supported.'

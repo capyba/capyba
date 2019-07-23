@@ -1,5 +1,5 @@
 br:
-  test: "Isto é um teste"
-  success:
-    'true':
-      'cav': 'Real'
+  database:
+    error_message:
+      driver:
+        unsupported: 'O driver de Banco de Dados informado não é suportado.'

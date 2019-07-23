@@ -28,7 +28,7 @@ module PostgreSQLModule
 
   def exec(script)
     if conn.nil?
-      'O driver de Banco de Dados informado não é suportado.'
+      I18n.t('database.error_message.driver.unsupported')
     else
       conn
       @hash = @client.query(script.to_s)

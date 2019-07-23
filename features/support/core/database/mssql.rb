@@ -45,7 +45,7 @@ module MSSQLModule
 
   def execute(script, each = false)
     if conn.nil?
-      'O driver de Banco de Dados informado não é suportado.'
+      I18n.t('database.error_message.driver.unsupported')
     else
       case each
       when true
