@@ -48,6 +48,8 @@ GEM
     equatable (0.6.1)
     faker (1.9.6)
       i18n (>= 0.7)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.11.1-x64-mingw32)
     gherkin (5.1.0)
     gmail (0.7.1)
@@ -55,6 +57,7 @@ GEM
       mail (>= 2.2.1)
     gmail_xoauth (0.4.2)
       oauth (>= 0.3.6)
+    highline (2.0.2)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     httparty (0.17.0)
@@ -77,6 +80,7 @@ GEM
     multi_json (1.13.1)
     multi_test (0.1.2)
     multi_xml (0.6.0)
+    multipart-post (2.1.1)
     mysql2 (0.5.2)
     mysql2 (0.5.2-x64-mingw32)
     necromancer (0.5.0)
@@ -114,7 +118,7 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rainbow (3.0.0)
-    rake (12.3.2)
+    rake (12.3.3)
     rdoc (6.1.1)
     regexp_parser (1.6.0)
     report_builder (1.8)
@@ -180,6 +184,8 @@ GEM
       wisper (~> 2.0.0)
     tty-screen (0.7.0)
     tty-tree (0.3.0)
+    tzinfo (2.0.0)
+      concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
@@ -193,6 +199,8 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  addressable (~> 2.6)
+  builder (~> 3.2, >= 3.2.3)
   capybara (~> 3.23)
   capybara-screenshot (~> 1.0, >= 1.0.23)
   colorize (~> 0.8.1)
@@ -201,7 +209,9 @@ DEPENDENCIES
   database_cleaner (~> 1.7)
   dotenv (~> 2.7, >= 2.7.2)
   faker (~> 1.9, >= 1.9.3)
+  faraday (~> 0.15.4)
   gmail (~> 0.7.1)
+  highline (~> 2.0, >= 2.0.2)
   httparty (~> 0.17.0)
   i18n (~> 1.6)
   json (~> 2.2)
@@ -218,6 +228,7 @@ DEPENDENCIES
   prettier (~> 0.13.0)
   pry (~> 0.12.2)
   rack (~> 2.0, >= 2.0.7)
+  rainbow (~> 3.0)
   rake (~> 12.3, >= 12.3.2)
   rdoc (~> 6.1, >= 6.1.1)
   report_builder (~> 1.8)
@@ -233,6 +244,7 @@ DEPENDENCIES
   syntax (~> 1.2, >= 1.2.2)
   tty-prompt (~> 0.19.0)
   tty-tree (~> 0.3.0)
+  tzinfo (~> 2.0)
 
 BUNDLED WITH
    2.0.2
