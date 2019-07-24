@@ -19,15 +19,24 @@ Some of its great features are:
 
 ## Installing
 
+1. Fork this repository if you want your own copy to play with
+2. Clone this repository (or your fork) onto your local computer
+3. If you haven't installed the "bundler" gem yet, do so now by running
+
 ```bash
-git clone https://github.com/capyba/capyba.git
+gem install bundler
 ```
 
-After downloading the repository, go to the root folder of it and run the following command:
+    It's ok to run this even if bundler is already installed. The "bundler" gem provides the `bundle` command.
+
+4. In the `capyba` directory, run
 
 ```bash
 bundle install
 ```
+
+    to install the necessary gems. 
+    If this doesn't work, either the "bundler" gem isn't installed or there is something wrong with your Ruby installation. Let us know!
 
 ## Usage
 

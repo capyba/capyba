@@ -3,20 +3,26 @@
 require_relative 'dotenv'
 
 ###
-# @description: App Module Env Catcher
+# @description: App Env Catcher
 ###
-module AppModule
-  include EnvironmentModule
+class AppEnvironment
+  prepend EnvironmentModule
 
-  module_function
+  required = %w[APP_ENV APP_HOST APP_LANG]
 
-  Dotenv.require_keys('APP_ENV', 'APP_HOST', 'APP_LANG')
+  Dotenv.require_keys(required)
 
   def env
-    {
-      app_env: ENV.fetch('APP_ENV', 'production'),
-      app_host: ENV.fetch('APP_HOST', 'http://localhost'),
-      app_lang: ENV.fetch('APP_LANG', 'en')
-    }
+    check_env_keys('APP_ENV', 'local')
+  end
+
+  def host
+    check_env_keys('APP_HOST', 'http://localhost')
+  end
+
+  def language
+    check_env_keys('APP_LANG', 'en')
   end
 end
+
+p AppEnvironment.new.host
