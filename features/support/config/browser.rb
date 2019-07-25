@@ -12,8 +12,13 @@ module BrowserModule
 
   Dotenv.require_keys('BROWSER')
 
-  def browser
-    check_env_keys('BROWSER', 'firefox')
+  def driver
+    browser = check_env_keys('BROWSER', 'firefox')
+    browsers = %w[chrome firefox]
+    return unless browsers.include?(browser)
+
+    browser = "#{browser}_headless" if browser_headless.eql?('true')
+    browser.to_sym
   end
 
   def browser_headless
@@ -44,11 +49,13 @@ module BrowserModule
     check_env_keys('SCREENSHOT_ONLY_FAILURES', false)
   end
 
-  def window_size_width
-    check_env_keys('WINDOW_SIZE_WIDTH', 1366)
-  end
-
   def window_size_height
     check_env_keys('WINDOW_SIZE_HEIGHT', 768)
   end
+
+  def window_size_width
+    check_env_keys('WINDOW_SIZE_WIDTH', 1366)
+  end
 end
+
+p BrowserModule.driver

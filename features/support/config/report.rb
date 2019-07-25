@@ -6,15 +6,19 @@ require_relative 'dotenv'
 # @description: Report Module Env Catcher
 ###
 module ReportModule
-  include EnvironmentModule
+  extend EnvironmentModule
 
   module_function
 
-  def env
-    {
-      report_type: ENV.fetch('REPORT_TYPE', 'html'),
-      report_only_defects: ENV.fetch('REPORT_ONLY_DEFECTS', false),
-      report_include_evidences: ENV.fetch('REPORT_INCLUDE_EVIDENCES', false)
-    }
+  def include_evidences
+    check_env_keys('REPORT_INCLUDE_EVIDENCES', false)
+  end
+
+  def only_defects
+    check_env_keys('REPORT_ONLY_DEFECTS', false)
+  end
+
+  def type
+    check_env_keys('REPORT_TYPE', 'html')
   end
 end

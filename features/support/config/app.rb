@@ -10,13 +10,13 @@ module AppModule
 
   module_function
 
-  Dotenv.require_keys('APP_ENV', 'APP_HOST', 'APP_LANG')
+  Dotenv.require_keys(%w[APP_ENV APP_HOST APP_LANG])
 
   def env
     check_env_keys('APP_ENV', 'local')
   end
 
-  def host
+  def hostname
     check_env_keys('APP_HOST', 'http://localhost')
   end
 

@@ -6,20 +6,39 @@ require_relative 'dotenv'
 # @description: Mail Module Env Catcher
 ###
 module MailModule
-  include EnvironmentModule
+  extend EnvironmentModule
 
   module_function
 
-  def env
-    {
-      mail_type: ENV.fetch('MAIL_TYPE', 'smtp'),
-      mail_host: ENV.fetch('MAIL_HOST', 'smtp.mailgun.org'),
-      mail_port: ENV.fetch('MAIL_PORT', 587),
-      mail_user: ENV.fetch('MAIL_USER', ''),
-      mail_pass: ENV.fetch('MAIL_PASS', ''),
-      mail_hash: ENV.fetch('MAIL_HASH', 'tls'),
-      mail_addr: ENV.fetch('MAIL_ADDR', 'hello@example.com'),
-      mail_name: ENV.fetch('MAIL_NAME', 'Example')
-    }
+  def address
+    check_env_keys('MAIL_ADDR', 'hello@example.com')
+  end
+
+  def hash
+    check_env_keys('MAIL_HASH', 'tls')
+  end
+
+  def hostname
+    check_env_keys('MAIL_HOST', 'smtp.mailgun.org')
+  end
+
+  def name
+    check_env_keys('MAIL_NAME', 'Example')
+  end
+
+  def password
+    check_env_keys('MAIL_PASS', nil)
+  end
+
+  def port
+    check_env_keys('MAIL_PORT', 587)
+  end
+
+  def type
+    check_env_keys('MAIL_TYPE', 'smtp')
+  end
+
+  def username
+    check_env_keys('MAIL_USER', nil)
   end
 end
