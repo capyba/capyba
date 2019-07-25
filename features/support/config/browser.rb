@@ -57,5 +57,3 @@ module BrowserModule
     check_env_keys('WINDOW_SIZE_WIDTH', 1366)
   end
 end
-
-p BrowserModule.driver

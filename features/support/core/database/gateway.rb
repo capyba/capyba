@@ -1,27 +1,26 @@
 # frozen_string_literal: true
 
 require 'net/ssh/gateway'
-
-require_relative '../../config/modules'
+require_relative File.expand_path('features/support/config/ssh')
 
 ###
 # @description: SSH Gateway Tunnel Module
 ###
 module GatewayModule
-  include Modules
+  include SSHModule
 
   module_function
 
   def tunnel
     gateway = Net::SSH::Gateway.new(
-      Modules::SSH.host,
-      Modules::SSH.user,
-      password: Modules::SSH.pass,
-      port: Modules::SSH.port
+      SSHModule.hostname,
+      SSHModule.username,
+      password: SSHModule.password,
+      port: SSHModule.port
     )
-    host = Modules::Database.host
-    port = Modules::Database.port
-    local_port = Modules::Database.localPort
-    gateway.open(host, port, local_port)
+    host = DatabaseModule.host
+    port = DatabaseModule.port
+    ssh_port = DatabaseModule.ssh_port
+    gateway.open(host, port, ssh_port)
   end
 end

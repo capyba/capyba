@@ -11,18 +11,17 @@ module MSSQLModule
 
   module_function
 
-  @driver = Modules::Database.connection
-  @sshd = Modules::Database.sshd.to_s.eql?('true')
+  @sshd = DatabaseModule.ssh.eql?('true')
 
   def conn
-    return unless @driver.eql?('mssql')
+    return unless DatabaseModule.driver.eql?('mssql')
 
     @client = TinyTds::Client.new(
-      host: Modules::Database.host,
-      username: Modules::Database.user,
-      password: Modules::Database.pass,
-      database: Modules::Database.name,
-      port: @sshd ? GatewayModule.tunnel : Modules::Database.port,
+      host: DatabaseModule.hostname,
+      username: DatabaseModule.username,
+      password: DatabaseModule.passname,
+      database: DatabaseModule.database,
+      port: @sshd ? GatewayModule.tunnel : DatabaseModule.port,
       login_timeout: 60,
       timeout: 300
     )

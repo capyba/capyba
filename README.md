@@ -63,3 +63,7 @@ Comments and feedback are welcome. Send an email to Lucas Ferreira via the [goog
 ## License
 
 This code is free to use under the terms of the MIT license.
+
+## Observation
+
+It is mandatory to install FreeTDS in your machine in order to use tiny_tds
