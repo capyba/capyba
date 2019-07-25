@@ -3,14 +3,14 @@
 require_relative 'dotenv'
 
 ###
-# @description: App Env Catcher
+# @description: App Module Env Catcher
 ###
-class AppEnvironment
-  prepend EnvironmentModule
+module AppModule
+  extend EnvironmentModule
 
-  required = %w[APP_ENV APP_HOST APP_LANG]
+  module_function
 
-  Dotenv.require_keys(required)
+  Dotenv.require_keys('APP_ENV', 'APP_HOST', 'APP_LANG')
 
   def env
     check_env_keys('APP_ENV', 'local')
@@ -24,5 +24,3 @@ class AppEnvironment
     check_env_keys('APP_LANG', 'en')
   end
 end
-
-p AppEnvironment.new.host
