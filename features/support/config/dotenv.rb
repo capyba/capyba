@@ -12,9 +12,9 @@ module EnvironmentModule
 
   def check_env_keys(key, default)
     if ENV.key?(key) && ENV[key].to_s.empty?
-      ENV.store(key, default)
+      ENV.store(key, default.to_s)
     else
-      ENV.fetch(key, default)
+      ENV.fetch(key, default.to_s)
     end
   end
 end
