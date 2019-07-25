@@ -11,18 +11,17 @@ module PostgreSQLModule
 
   module_function
 
-  @driver = Modules::Database.connection
-  @sshd = Modules::Database.sshd.to_s.eql?('true')
+  @sshd = DatabaseModule.ssh.eql?('true')
 
   def conn
-    return unless @driver.eql?('pgsql')
+    return unless DatabaseModule.driver.eql?('pgsql')
 
     @client = PG::Connection.new(
-      host: Modules::Database.host,
-      dbname: Modules::Database.name,
-      user: Modules::Database.user,
-      password: Modules::Database.pass,
-      port: @sshd ? GatewayModule.tunnel : Modules::Database.port
+      host: DatabaseModule.hostname,
+      user: DatabaseModule.username,
+      password: DatabaseModule.password,
+      dbname: DatabaseModule.database,
+      port: @sshd ? GatewayModule.tunnel : DatabaseModule.port
     )
   end
 

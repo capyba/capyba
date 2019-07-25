@@ -12,21 +12,38 @@ module BrowserModule
 
   Dotenv.require_keys('BROWSER')
 
-  def driver
-    browser = check_env_keys('BROWSER', 'firefox')
-    browsers = %w[chrome firefox]
-    return unless browsers.include?(browser)
-
-    browser = "#{browser}_headless" if browser_headless.eql?('true')
-    browser.to_sym
-  end
-
   def browser_headless
     check_env_keys('BROWSER_HEADLESS', false)
   end
 
   def default_max_wait_time
     check_env_keys('DEFAULT_MAX_WAIT_TIME', 2)
+  end
+
+  def default_selector
+    check_env_keys('DEFAULT_SELECTOR', :css).to_sym
+  end
+
+  def driver
+    browser = check_env_keys('BROWSER', 'firefox')
+    browsers = %w[chrome firefox]
+    return unless browsers.include?(browser)
+
+    browser = "#{browser}_headless" if browser_headless.eql?('true')
+    driver_name(browser)
+  end
+
+  def driver_name(browser)
+    case browser
+    when 'chrome'
+      :selenium_chrome
+    when 'chrome_headless'
+      :selenium_chrome_headless
+    when 'firefox_headless'
+      :selenium_headless
+    else
+      :selenium
+    end
   end
 
   def ignore_hidden_elements

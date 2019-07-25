@@ -11,18 +11,17 @@ module MySQLModule
 
   module_function
 
-  @driver = Modules::Database.connection
-  @sshd = Modules::Database.sshd.to_s.eql?('true')
+  @sshd = DatabaseModule.ssh.eql?('true')
 
   def conn
-    return unless @driver.eql?('mysql')
+    return unless DatabaseModule.driver.eql?('mysql')
 
     @client = Mysql2::Client.new(
-      host: Modules::Database.host,
-      username: Modules::Database.user,
-      password: Modules::Database.pass,
-      database: Modules::Database.name,
-      port: @sshd ? GatewayModule.tunnel : Modules::Database.port
+      host: DatabaseModule.hostname,
+      username: DatabaseModule.username,
+      password: DatabaseModule.password,
+      database: DatabaseModule.database,
+      port: @sshd ? GatewayModule.tunnel : DatabaseModule.port
     )
   end
 
