@@ -50,6 +50,7 @@ gem 'rubyzip', '~> 1.2', '>= 1.2.3'
 gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
 gem 'simplecov', '~> 0.16.1'
 gem 'site_prism', '~> 3.2'
+gem 'solargraph', '~> 0.35.0'
 gem 'spreadsheet', '~> 1.2', '>= 1.2.4'
 # you should install sqlite3 manually (gem install sqlite3)
 # gem 'sqlite3', '~> 1.4', '>= 1.4.1'

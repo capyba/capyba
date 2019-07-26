@@ -2,11 +2,19 @@
 
 require 'capybara'
 require 'capybara/cucumber'
+require 'mysql2'
+require 'os'
 require 'selenium-webdriver'
 
-require_relative File.expand_path('features\support\helpers\wait_helper')
-require_relative File.expand_path('features\support\config\app')
-require_relative File.expand_path('features\support\config\browser')
+require_relative File.join(Dir.pwd, '/features/support/core/functions/path')
+
+app = File.expand_path('features/support/config/app')
+browser = File.expand_path('features/support/config/browser')
+wait = File.expand_path('features/support/helpers/wait_helper')
+
+require_relative Path.new.convert(app)
+require_relative Path.new.convert(browser)
+require_relative Path.new.convert(wait)
 
 World(WaitHelper)
 
