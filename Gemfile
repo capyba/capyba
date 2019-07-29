@@ -4,19 +4,20 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem 'addressable', '~> 2.6'
-gem 'builder', '~> 3.2', '>= 3.2.3'
+gem 'addressable', '~> 2.6' # doc
+gem 'builder', '~> 3.2', '>= 3.2.3' # doc
 gem 'capybara', '~> 3.23'
 gem 'capybara-screenshot', '~> 1.0', '>= 1.0.23'
 gem 'colorize', '~> 0.8.1'
 gem 'cpf_cnpj', '~> 0.5.0'
+gem 'csv', '~> 3.1', '>= 3.1.1' # doc
 gem 'cucumber', '~> 3.1', '>= 3.1.2'
 gem 'database_cleaner', '~> 1.7'
 gem 'dotenv', '~> 2.7', '>= 2.7.2'
 gem 'faker', '~> 1.9', '>= 1.9.3'
-gem 'faraday', '~> 0.15.4'
+gem 'faraday', '~> 0.15.4' # doc
 gem 'gmail', '~> 0.7.1'
-gem 'highline', '~> 2.0', '>= 2.0.2'
+gem 'highline', '~> 2.0', '>= 2.0.2' # doc
 gem 'httparty', '~> 0.17.0'
 gem 'i18n', '~> 1.6'
 gem 'json', '~> 2.2'
@@ -25,7 +26,7 @@ gem 'mysql2', '~> 0.5.2'
 gem 'net-scp', '~> 2.0'
 gem 'net-ssh', '~> 5.2'
 gem 'net-ssh-gateway', '~> 2.0'
-gem 'nokogiri', '~> 1.10', '>= 1.10.3'
+gem 'nokogiri', '~> 1.10', '>= 1.10.3' # doc
 gem 'optimist', '~> 3.0'
 gem 'os', '~> 1.0', '>= 1.0.1'
 gem 'parallel_tests', '~> 2.29', '>= 2.29.1'
@@ -48,15 +49,15 @@ gem 'rubocop', '~> 0.71.0'
 gem 'ruby-progressbar', '~> 1.10', '>= 1.10.1'
 gem 'rubyzip', '~> 1.2', '>= 1.2.3'
 gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
-gem 'simplecov', '~> 0.16.1'
+gem 'simplecov', '~> 0.16.1' # doc
 gem 'site_prism', '~> 3.2'
 gem 'solargraph', '~> 0.35.0'
-gem 'spreadsheet', '~> 1.2', '>= 1.2.4'
+gem 'spreadsheet', '~> 1.2', '>= 1.2.4' # doc
 # you should install sqlite3 manually (gem install sqlite3)
 # gem 'sqlite3', '~> 1.4', '>= 1.4.1'
 gem 'syntax', '~> 1.2', '>= 1.2.2'
 gem 'thor', '~> 0.20.3'
 gem 'tiny_tds', '~> 2.1', '>= 2.1.2'
-gem 'tty-prompt', '~> 0.19.0'
+gem 'tty-prompt', '~> 0.19.0' # bug
 gem 'tty-tree', '~> 0.3.0'
 gem 'tzinfo', '~> 2.0'
