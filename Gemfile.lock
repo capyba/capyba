@@ -1,8 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    Ascii85 (1.0.3)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    afm (0.2.2)
     ast (2.4.0)
     backport (1.1.1)
     backports (3.15.0)
@@ -59,6 +61,7 @@ GEM
       mail (>= 2.2.1)
     gmail_xoauth (0.4.2)
       oauth (>= 0.3.6)
+    hashery (2.1.2)
     highline (2.0.2)
     htmlentities (4.3.4)
     http-cookie (1.0.3)
@@ -110,6 +113,12 @@ GEM
       equatable (~> 0.6)
       tty-color (~> 0.5)
     pdf-core (0.7.0)
+    pdf-reader (2.2.1)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
     people (0.2.1)
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
@@ -161,6 +170,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 1.7)
     ruby-ole (1.2.12.2)
     ruby-progressbar (1.10.1)
+    ruby-rc4 (0.1.5)
     rubyzip (1.2.3)
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
@@ -249,6 +259,7 @@ DEPENDENCIES
   optimist (~> 3.0)
   os (~> 1.0, >= 1.0.1)
   parallel_tests (~> 2.29, >= 2.29.1)
+  pdf-reader (~> 2.2, >= 2.2.1)
   people (~> 0.2.1)
   prawn (~> 2.2, >= 2.2.2)
   prettier (~> 0.13.0)

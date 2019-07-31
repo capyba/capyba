@@ -30,6 +30,7 @@ gem 'nokogiri', '~> 1.10', '>= 1.10.3' # doc
 gem 'optimist', '~> 3.0'
 gem 'os', '~> 1.0', '>= 1.0.1'
 gem 'parallel_tests', '~> 2.29', '>= 2.29.1'
+gem 'pdf-reader', '~> 2.2', '>= 2.2.1'
 gem 'people', '~> 0.2.1'
 # you should install pg manually (gem install pg)
 # gem 'pg', '~> 1.1', '>= 1.1.4'
