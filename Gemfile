@@ -60,11 +60,12 @@ gem 'rspec-expectations', '~> 3.8', '>= 3.8.4'
 gem 'rubocop', '~> 0.71.0'
 gem 'ruby-progressbar', '~> 1.10', '>= 1.10.1'
 gem 'ruby-units', '~> 2.3', '>= 2.3.1'
+gem 'rubycritic', '~> 4.1'
 gem 'rubyzip', '~> 1.2', '>= 1.2.3'
 gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
-gem 'slack-ruby-client', '~> 0.14.4' # doc
 gem 'simplecov', '~> 0.16.1' # doc
 gem 'site_prism', '~> 3.2'
+gem 'slack-ruby-client', '~> 0.14.4' # doc
 gem 'solargraph', '~> 0.35.0'
 gem 'spreadsheet', '~> 1.2', '>= 1.2.4' # doc
 # you should install sqlite3 manually (gem install sqlite3)

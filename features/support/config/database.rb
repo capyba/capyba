@@ -36,7 +36,7 @@ module DatabaseModule
   end
 
   def password
-    check_env_keys('DB_NAME', 'forge')
+    check_env_keys('DB_PASS', 'forge')
   end
 
   def port
@@ -52,6 +52,6 @@ module DatabaseModule
   end
 
   def username
-    check_env_keys('DB_NAME', 'forge')
+    check_env_keys('DB_USER', 'forge')
   end
 end

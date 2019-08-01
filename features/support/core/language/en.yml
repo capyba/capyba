@@ -3,3 +3,5 @@ en:
     error_message:
       driver:
         unsupported: 'The entered Database Driver is not supported.'
+      query:
+        execution: 'Something went wrong when executing the query'
