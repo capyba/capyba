@@ -44,12 +44,12 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2019-08-02 13:44:32 -0300'>2019-08-02 13:44:32 -0300</time>
+          Never committed
         
       </span>
     </div>
     <div>
-      <h3><small>features/support/core/database /</small> database.rb</h3>
+      <h3><small>features/support/core/database /</small> mysql_settings.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -65,15 +65,15 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">48</span><small> lines of codes</small></div>
-              <div><span class="metric">5</span><small> methods</small></div>
+              <div><span class="metric">32</span><small> lines of codes</small></div>
+              <div><span class="metric">3</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">5.2</span><small> complexity/method</small></div>
-              <div><span class="metric">2</span><small> churn</small></div>
+              <div><span class="metric">7.3</span><small> complexity/method</small></div>
+              <div><span class="metric">0</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">26.18</span><small> complexity</small></div>
+              <div><span class="metric">21.9</span><small> complexity</small></div>
               <div><span class="metric">0</span><small> duplications</small></div>
             </div>
           </div>
@@ -96,52 +96,36 @@
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># frozen_string_literal: true
 
+require &#39;mysql2&#39;
+
 require_relative &#39;settings&#39;
-require_relative &#39;mssql_settings&#39;
-require_relative &#39;mysql_settings&#39;
-require_relative &#39;pgsql_settings&#39;
-require_relative File.expand_path(&#39;features\support\config\locale&#39;)
 
-# @description: Database Class
-class Database
+###
+# @description: Database MYSQL Settings Module
+###
+module DatabaseMYSQLSettingsModule
   include DatabaseSettingsModule
-  include DatabaseMSSQLSettingsModule
 
-  def initialize
-    @driver = DatabaseSettingsModule.driver
+  module_function
+
+  def connection
+    Mysql2::Client.new(mysql_settings)
   end
 
-  def conn
-    database(@driver) if %w[mssql mysql pgsql].include?(@driver)
+  def settings
+    DatabaseSettingsModule.settings
   end
 
-  def database(driver)
-    case driver
-    when &#39;mssql&#39;
-      DatabaseMSSQLSettingsModule.connection
-    when &#39;mysql&#39;
-      DatabaseMYSQLSettingsModule.connection
-    when &#39;pgsql&#39;
-      DatabasePGSQLSettingsModule.connection
-    end
-  end
-
-  def database_query(script)
-    @driver.eql?(&#39;mssql&#39;) ? conn.execute(script) : conn.query(script)
-  end
-
-  def execute(script)
-    database_query(script)
-  rescue NoMethodError =&gt; e
-    puts &quot;\n&gt;&gt;&gt; #{I18n.t(&#39;database.error_message.driver.unsupported&#39;)} &lt;&lt;&lt;\n&quot;
-  rescue StandardError =&gt; e
-    puts &quot;\n&gt;&gt;&gt; #{I18n.t(&#39;database.error_message.query.execution&#39;)} &lt;&lt;&lt;\n&quot;
-  ensure
-    conn.close unless e
+  def mysql_settings
+    OpenStruct.new(
+      host: settings.hostname,
+      username: settings.username,
+      password: settings.password,
+      database: settings.database,
+      port: settings.port
+    ).to_h
   end
 end
-
-p Database.new.execute(&#39;select * from teste&#39;).each
 </code>
   </div>
 </div>
