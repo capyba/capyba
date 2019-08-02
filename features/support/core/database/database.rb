@@ -12,15 +12,14 @@ require_relative File.expand_path('features\support\config\locale')
 class Database
   include GatewayModule
 
-  attr_accessor :driver, :ssh
-
   def initialize
-    self.driver = DatabaseModule.driver
-    self.ssh = DatabaseModule.ssh.eql?('true')
+    @driver = DatabaseModule.driver
+    @ssh = DatabaseModule.ssh.eql?('true')
+    @successful = true
   end
 
   def connection
-    database(driver) if %w[mssql mysql pgsql].include?(driver)
+    database(@driver) if %w[mssql mysql pgsql].include?(@driver)
   end
 
   def database(driver)
@@ -36,12 +35,14 @@ class Database
 
   def execute(script)
     connection.query(script)
-  rescue NoMethodError => e
+  rescue NoMethodError
+    @successful = false
     puts "\n>>> #{I18n.t('database.error_message.driver.unsupported')} <<<\n"
-  rescue StandardError => e
+  rescue StandardError
+    @successful = false
     puts "\n>>> #{I18n.t('database.error_message.query.execution')} <<<\n"
   ensure
-    connection.close unless e
+    connection.close if @successful
   end
 
   def settings
@@ -50,7 +51,7 @@ class Database
       username: DatabaseModule.username,
       password: DatabaseModule.password,
       database: DatabaseModule.database,
-      port: ssh ? GatewayModule.tunnel : DatabaseModule.port
+      port: @ssh ? GatewayModule.tunnel : DatabaseModule.port
     )
   end
 
@@ -89,5 +90,7 @@ class Database
 end
 
 # query = 'select * from teste'
+# select = 'select * from teste'
 insert = "insert into teste(column1) values('Teste') RETURNING *"
 p Database.new.execute(insert)
+# p Database.new.instance_variables

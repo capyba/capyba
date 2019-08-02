@@ -85,7 +85,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                1
+                0
                 smell
               </a>
             </li>
@@ -102,7 +102,7 @@ require &#39;os&#39;
 # @description: File Class
 ###
 class Path
-  def convert(path)<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Utility-Function.md" target="_blank"><b>UtilityFunction</b></a>        </span>      </div>      <span>Path#convert doesn't depend on instance state (maybe move it to another class?)</span>          </div>  </li></ol>
+  def convert(path)
     OS.windows? ? path.tr(&#39;/&#39;, &#39;\\&#39;) : path
   end
 end

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
+gem "activesupport", ">= 4.1.11"
 gem 'addressable', '~> 2.6' # doc
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'
 gem 'browser', '~> 2.6', '>= 2.6.1' # doc
@@ -42,7 +43,7 @@ gem 'pastel', '~> 0.7.3' # doc
 gem 'pdf-reader', '~> 2.2', '>= 2.2.1' # doc
 gem 'people', '~> 0.2.1'
 # you should install pg manually (gem install pg)
-# gem 'pg', '~> 1.1', '>= 1.1.4'
+gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'prawn', '~> 2.2', '>= 2.2.2'
 gem 'prettier', '~> 0.13.0'
 gem 'pry', '~> 0.12.2'
@@ -69,18 +70,18 @@ gem 'slack-ruby-client', '~> 0.14.4' # doc
 gem 'solargraph', '~> 0.35.0'
 gem 'spreadsheet', '~> 1.2', '>= 1.2.4' # doc
 # you should install sqlite3 manually (gem install sqlite3)
-# gem 'sqlite3', '~> 1.4', '>= 1.4.1'
+gem 'sqlite3', '~> 1.4', '>= 1.4.1'
 gem 'strings', '~> 0.1.5' # doc
 gem 'syntax', '~> 1.2', '>= 1.2.2'
 gem 'terminal-table', '~> 1.8' # doc
 gem 'thor', '~> 0.20.3'
+gem 'timezone', '~> 1.3', '>= 1.3.5'
 gem 'tiny_tds', '~> 2.1', '>= 2.1.2'
 gem 'tty-prompt', '~> 0.19.0' # bug
 gem 'tty-tree', '~> 0.3.0'
-gem 'tzinfo', '~> 2.0'
 # gem 'webdrivers', '~> 4.1', '>= 4.1.2'
 
 # --- Soon --- #
-# gem 'mongo', '~> 2.9'
-# gem 'redis', '~> 4.1', '>= 4.1.2'
-# gem 'cassandra-driver', '~> 3.2', '>= 3.2.3'
+gem 'mongo', '~> 2.9'
+gem 'redis', '~> 4.1', '>= 4.1.2'
+gem 'cassandra-driver', '~> 3.2', '>= 3.2.3'
