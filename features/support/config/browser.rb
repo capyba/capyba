@@ -17,7 +17,7 @@ module BrowserModule
   end
 
   def default_max_wait_time
-    check_env_keys('DEFAULT_MAX_WAIT_TIME', 2)
+    check_env_keys('DEFAULT_MAX_WAIT_TIME', 2).to_i
   end
 
   def default_selector

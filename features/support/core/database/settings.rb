@@ -5,9 +5,7 @@ require 'ostruct'
 require_relative 'gateway'
 require_relative File.expand_path('features\support\config\database')
 
-###
 # @description: Database Settings Module
-###
 module DatabaseSettingsModule
   include DatabaseModule
   include GatewayModule

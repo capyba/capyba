@@ -4,9 +4,7 @@ require 'mysql2'
 
 require_relative 'settings'
 
-###
 # @description: Database MYSQL Settings Module
-###
 module DatabaseMYSQLSettingsModule
   include DatabaseSettingsModule
 

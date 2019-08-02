@@ -4,9 +4,7 @@ require 'pg'
 
 require_relative 'settings'
 
-###
 # @description: Database PGSQL Settings Module
-###
 module DatabasePGSQLSettingsModule
   include DatabaseSettingsModule
 

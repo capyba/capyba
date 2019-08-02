@@ -3,9 +3,7 @@
 require 'net/ssh/gateway'
 require_relative File.expand_path('features/support/config/ssh')
 
-###
 # @description: SSH Gateway Tunnel Module
-###
 module GatewayModule
   include SSHModule
 

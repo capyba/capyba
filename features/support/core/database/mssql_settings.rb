@@ -4,9 +4,7 @@ require 'tiny_tds'
 
 require_relative 'settings'
 
-###
 # @description: Database MSSQL Settings Module
-###
 module DatabaseMSSQLSettingsModule
   include DatabaseSettingsModule
 

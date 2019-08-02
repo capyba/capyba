@@ -7,3 +7,8 @@ Feature: Google
     Given I visit 'https://www.google.com'
     When I search for 'Github'
     Then the result is shown
+
+  Scenario: Login Google
+    Given I visit 'https://www.google.com'
+    When I enter my credentials
+    Then the login is done
