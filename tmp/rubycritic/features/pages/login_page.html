@@ -49,7 +49,7 @@
       </span>
     </div>
     <div>
-      <h3><small>features/step_definitions /</small> google_steps.rb</h3>
+      <h3><small>features/pages /</small> login_page.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -66,14 +66,14 @@
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
               <div><span class="metric">22</span><small> lines of codes</small></div>
-              <div><span class="metric">0</span><small> methods</small></div>
+              <div><span class="metric">1</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">N/A</span><small> complexity/method</small></div>
-              <div><span class="metric">2</span><small> churn</small></div>
+              <div><span class="metric">14.7</span><small> complexity/method</small></div>
+              <div><span class="metric">1</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">22.58</span><small> complexity</small></div>
+              <div><span class="metric">14.73</span><small> complexity</small></div>
               <div><span class="metric">0</span><small> duplications</small></div>
             </div>
           </div>
@@ -85,7 +85,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                0
+                1
                 smell
               </a>
             </li>
@@ -96,25 +96,25 @@
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># frozen_string_literal: true
 
-Given(&#39;I visit {string}&#39;) do |url|
-  visit url
-end
+require &#39;capybara/dsl&#39;
 
-When(&#39;I search for {string}&#39;) do |word|
-  find(&quot;input[name=&#39;q&#39;]&quot;).send_keys word, :enter
-end
+require_relative File.expand_path(&#39;features\support\config\login&#39;)
 
-Then(&#39;the result is shown&#39;) do
-  expect(page).to have_css(&quot;div[id=&#39;search&#39;]&quot;, wait: 10)
-end
+##
+# Login Page
+##
+class LoginPage
+  include Capybara::DSL
+  include LoginModule
 
-# For login
-When(&#39;I enter my credentials&#39;) do
-  @login_page.proceed
-end
-
-Then(&#39;the login is done&#39;) do
-  expect(page.current_url).to have_text &#39;https://myaccount.google.com&#39;
+  def proceed<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md" target="_blank"><b>TooManyStatements</b></a>        </span>      </div>      <span>LoginPage#proceed has approx 6 statements</span>          </div>  </li></ol>
+    visit &#39;https://accounts.google.com/ServiceLogin&#39;
+    find(&quot;input[name=&#39;identifier&#39;]&quot;).set LoginModule.username
+    find(&#39;#identifierNext&#39;).click
+    find(&quot;input[name=&#39;password&#39;]&quot;).set LoginModule.password
+    find(&#39;#passwordNext&#39;).click
+    sleep 2
+  end
 end
 </code>
   </div>

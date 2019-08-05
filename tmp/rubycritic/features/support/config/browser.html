@@ -44,7 +44,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2019-07-25 12:23:26 -0300'>2019-07-25 12:23:26 -0300</time>
+          Updated <time class='js-timeago' datetime='2019-08-02 19:26:28 -0300'>2019-08-02 19:26:28 -0300</time>
         
       </span>
     </div>
@@ -65,15 +65,15 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">76</span><small> lines of codes</small></div>
+              <div><span class="metric">79</span><small> lines of codes</small></div>
               <div><span class="metric">12</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">2.1</span><small> complexity/method</small></div>
-              <div><span class="metric">5</span><small> churn</small></div>
+              <div><span class="metric">2.4</span><small> complexity/method</small></div>
+              <div><span class="metric">6</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">24.97</span><small> complexity</small></div>
+              <div><span class="metric">29.32</span><small> complexity</small></div>
               <div><span class="metric">0</span><small> duplications</small></div>
             </div>
           </div>
@@ -96,6 +96,8 @@
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># frozen_string_literal: true
 
+require &#39;necromancer&#39;
+
 require_relative &#39;dotenv&#39;
 
 ###
@@ -109,11 +111,12 @@ module BrowserModule
   Dotenv.require_keys(&#39;BROWSER&#39;)
 
   def browser_headless
-    check_env_keys(&#39;BROWSER_HEADLESS&#39;, false)
+    headless = check_env_keys(&#39;BROWSER_HEADLESS&#39;, false)
+    Necromancer.convert(headless).to(:boolean).eql?(true)
   end
 
   def default_max_wait_time
-    check_env_keys(&#39;DEFAULT_MAX_WAIT_TIME&#39;, 2)
+    check_env_keys(&#39;DEFAULT_MAX_WAIT_TIME&#39;, 2).to_i
   end
 
   def default_selector
@@ -125,7 +128,7 @@ module BrowserModule
     browsers = %w[chrome firefox]
     return unless browsers.include?(browser)
 
-    browser = &quot;#{browser}_headless&quot; if browser_headless.eql?(&#39;true&#39;)
+    browser = &quot;#{browser}_headless&quot; if browser_headless
     driver_name(browser)
   end
 

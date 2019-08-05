@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'necromancer'
 require 'ostruct'
 
 require_relative 'gateway'
@@ -27,6 +28,6 @@ module DatabaseSettingsModule
   end
 
   def ssh
-    DatabaseModule.ssh.eql?('true')
+    Necromancer.convert(DatabaseModule.ssh).to(:boolean).eql?(true)
   end
 end

@@ -7,25 +7,13 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 # --- Core --- #
 gem 'activesupport', '>= 4.1.11'
 
-# --- Pending Evaluation --- #
-gem 'builder', '~> 3.2', '>= 3.2.3' # doc # 2017
-gem 'prettier', '~> 0.13.0'
-# -------------------------- #
-
 # --- API --- #
 gem 'faraday', '~> 0.15.4' # doc
 gem 'httparty', '~> 0.17.0'
 
-# --- Browser --- #
-gem 'browser', '~> 2.6', '>= 2.6.1' # doc
-# gem 'webdrivers', '~> 4.1', '>= 4.1.2'
-
 # --- Code Quality --- #
 gem 'rubocop', '~> 0.71.0'
 gem 'rubycritic', '~> 4.1'
-
-# --- Colorizer --- #
-gem 'rainbow', '~> 3.0' # 2017
 
 # --- Converter --- #
 gem 'necromancer', '~> 0.5.0' # doc
@@ -48,7 +36,6 @@ gem 'pry', '~> 0.12.2' # 2013
 gem 'pry-byebug', '~> 3.7'
 
 # --- Email --- #
-gem 'gmail', '~> 0.7.1' # 2018
 gem 'mail', '~> 2.7', '>= 2.7.1' # 2018
 
 # --- Excel --- #
@@ -58,7 +45,6 @@ gem 'spreadsheet', '~> 1.2', '>= 1.2.4' # doc
 
 # --- File --- #
 gem 'google_drive', '~> 3.0', '>= 3.0.3' # doc
-gem 'json', '~> 2.2'
 gem 'net-scp', '~> 2.0'
 gem 'net-sftp', '~> 2.1', '>= 2.1.2' # 2018
 gem 'nokogiri', '~> 1.10', '>= 1.10.3' # doc
@@ -77,6 +63,9 @@ gem 'i18n', '~> 1.6'
 
 # --- Installer --- #
 gem 'thor', '~> 0.20.3' # 2018
+
+# --- Json --- #
+gem 'json', '~> 2.2'
 
 # --- PDF --- #
 gem 'combine_pdf', '~> 1.0', '>= 1.0.16' # doc
@@ -118,6 +107,7 @@ gem 'rspec', '~> 3.8' # 2018
 gem 'rspec-core', '~> 3.8', '>= 3.8.2'
 gem 'rspec-expectations', '~> 3.8', '>= 3.8.4'
 gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
+# gem 'webdrivers', '~> 4.1', '>= 4.1.2'
 
 # --- Tools --- #
 gem 'countries', '~> 3.0' # 2018
@@ -130,3 +120,6 @@ gem 'timezone', '~> 1.3', '>= 1.3.5'
 
 # --- URL --- #
 gem 'addressable', '~> 2.6' # doc
+
+# --- XML --- #
+gem 'builder', '~> 3.2', '>= 3.2.3' # doc # 2017

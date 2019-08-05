@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'necromancer'
+
 require_relative 'dotenv'
 
 ###
@@ -13,7 +15,8 @@ module BrowserModule
   Dotenv.require_keys('BROWSER')
 
   def browser_headless
-    check_env_keys('BROWSER_HEADLESS', false)
+    headless = check_env_keys('BROWSER_HEADLESS', false)
+    Necromancer.convert(headless).to(:boolean).eql?(true)
   end
 
   def default_max_wait_time
@@ -29,7 +32,7 @@ module BrowserModule
     browsers = %w[chrome firefox]
     return unless browsers.include?(browser)
 
-    browser = "#{browser}_headless" if browser_headless.eql?('true')
+    browser = "#{browser}_headless" if browser_headless
     driver_name(browser)
   end
 

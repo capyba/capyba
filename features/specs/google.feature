@@ -3,6 +3,7 @@ Feature: Google
   As a visitor
   I want to access the page
 
+  @login
   Scenario: Visit Google Search Page
     Given I visit 'https://www.google.com'
     When I search for 'Github'

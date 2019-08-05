@@ -44,7 +44,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Never committed
+          Updated <time class='js-timeago' datetime='2019-08-02 19:26:28 -0300'>2019-08-02 19:26:28 -0300</time>
         
       </span>
     </div>
@@ -65,15 +65,15 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">34</span><small> lines of codes</small></div>
+              <div><span class="metric">33</span><small> lines of codes</small></div>
               <div><span class="metric">3</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">4.7</span><small> complexity/method</small></div>
-              <div><span class="metric">0</span><small> churn</small></div>
+              <div><span class="metric">5.7</span><small> complexity/method</small></div>
+              <div><span class="metric">2</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
-              <div><span class="metric">13.98</span><small> complexity</small></div>
+              <div><span class="metric">17.18</span><small> complexity</small></div>
               <div><span class="metric">0</span><small> duplications</small></div>
             </div>
           </div>
@@ -96,14 +96,13 @@
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># frozen_string_literal: true
 
+require &#39;necromancer&#39;
 require &#39;ostruct&#39;
 
 require_relative &#39;gateway&#39;
 require_relative File.expand_path(&#39;features\support\config\database&#39;)
 
-###
 # @description: Database Settings Module
-###
 module DatabaseSettingsModule
   include DatabaseModule
   include GatewayModule
@@ -125,7 +124,7 @@ module DatabaseSettingsModule
   end
 
   def ssh
-    DatabaseModule.ssh.eql?(&#39;true&#39;)
+    Necromancer.convert(DatabaseModule.ssh).to(:boolean).eql?(true)
   end
 end
 </code>
