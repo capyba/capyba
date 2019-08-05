@@ -15,6 +15,9 @@ gem 'httparty', '~> 0.17.0'
 gem 'rubocop', '~> 0.71.0'
 gem 'rubycritic', '~> 4.1'
 
+# --- Colorizer --- #
+gem 'pastel', '~> 0.7.3' # doc
+
 # --- Converter --- #
 gem 'necromancer', '~> 0.5.0' # doc
 gem 'ruby-units', '~> 2.3', '>= 2.3.1' # 2018
@@ -93,10 +96,8 @@ gem 'syntax', '~> 1.2', '>= 1.2.2' # 2017
 # --- Terminal --- #
 gem 'highline', '~> 2.0', '>= 2.0.2' # doc
 gem 'optimist', '~> 3.0' # 2018
-gem 'pastel', '~> 0.7.3' # doc
 gem 'terminal-table', '~> 1.8' # doc # 2017
 gem 'tty-prompt', '~> 0.19.0' # bug
-gem 'tty-tree', '~> 0.3.0'
 
 # --- Testing --- #
 gem 'capybara', '~> 3.23'
@@ -111,7 +112,6 @@ gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
 
 # --- Tools --- #
 gem 'countries', '~> 3.0' # 2018
-gem 'database_cleaner', '~> 1.7' # 2018
 gem 'dotenv', '~> 2.7', '>= 2.7.2'
 gem 'ruby-progressbar', '~> 1.10', '>= 1.10.1'
 gem 'site_prism', '~> 3.2'

@@ -80,18 +80,46 @@
 
 # ---------------------------------------- #
 
-require "thor"
+# require 'pastel'
+# pastel = Pastel.new
+# puts pastel.yellow.bold('Unicorns!')
 
-class MyCLI < Thor
-  desc "hello NAME", "say hello to NAME"
-  options :from => :required, :yell => :boolean
-  def hello(name)
-    output = []
-    output << "from: #{options[:from]}" if options[:from]
-    output << "Hello #{name}"
-    output = output.join("\n")
-    puts options[:yell] ? output.upcase : output
-  end
-end
+# ---------------------------------------- #
 
-MyCLI.start(ARGV)
+# require 'countries/global'
+
+# c = Country['US']
+# p c.number
+# p c.alpha2 # => "US"
+# p c.alpha3 # => "USA"
+# p c.gec    # => "US"
+
+# p c.name
+# p c.unofficial_names
+
+# p c.local_names
+
+# p c.region # => "Americas"
+# p c.subregion # => "Northern America"
+
+# p c.latitude # => "38 00 N"
+# p c.longitude # => "97 00 W"
+# p c.latitude_dec # => 39.44325637817383
+# p c.longitude_dec # => -98.95733642578125
+
+# ---------------------------------------- #
+
+require 'ruby-progressbar'
+
+progressbar = ProgressBar.create
+
+10.times { progressbar.increment; sleep 0.1 }
+15.times { progressbar.increment; sleep 0.1 }
+20.times { progressbar.increment; sleep 0.1 }
+15.times { progressbar.increment; sleep 0.1 }
+30.times { progressbar.increment; sleep 0.1 }
+10.times { progressbar.increment; sleep 0.1 }
+
+# 100 %
+
+# ---------------------------------------- #
