@@ -109,17 +109,24 @@
 
 # ---------------------------------------- #
 
-require 'ruby-progressbar'
+# require 'ruby-progressbar'
 
-progressbar = ProgressBar.create
+# progressbar = ProgressBar.create
 
-10.times { progressbar.increment; sleep 0.1 }
-15.times { progressbar.increment; sleep 0.1 }
-20.times { progressbar.increment; sleep 0.1 }
-15.times { progressbar.increment; sleep 0.1 }
-30.times { progressbar.increment; sleep 0.1 }
-10.times { progressbar.increment; sleep 0.1 }
+# 10.times { progressbar.increment; sleep 0.1 }
+# 15.times { progressbar.increment; sleep 0.1 }
+# 20.times { progressbar.increment; sleep 0.1 }
+# 15.times { progressbar.increment; sleep 0.1 }
+# 30.times { progressbar.increment; sleep 0.1 }
+# 10.times { progressbar.increment; sleep 0.1 }
 
 # 100 %
 
 # ---------------------------------------- #
+
+# 'https://wikimatze.de/installing-postgresql-gem-under-ubuntu-and-mac/'
+
+require "browser"
+
+browser = Browser.new("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36", accept_language: "en-us")
+p browser.mac?

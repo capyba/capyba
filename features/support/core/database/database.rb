@@ -4,7 +4,7 @@ require_relative 'settings'
 require_relative 'mssql_settings'
 require_relative 'mysql_settings'
 require_relative 'pgsql_settings'
-require_relative File.expand_path('features\support\config\locale')
+require_relative File.expand_path('features/support/config/locale')
 
 # @description: Database Class
 class Database

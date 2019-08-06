@@ -3,7 +3,7 @@
 require 'bcrypt'
 require 'capybara/dsl'
 
-require_relative File.expand_path('features\support\config\login')
+require_relative File.expand_path('features/support/config/login')
 
 ##
 # Login Page

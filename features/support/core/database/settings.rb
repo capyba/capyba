@@ -4,7 +4,7 @@ require 'necromancer'
 require 'ostruct'
 
 require_relative 'gateway'
-require_relative File.expand_path('features\support\config\database')
+require_relative File.expand_path('features/support/config/database')
 
 # @description: Database Settings Module
 module DatabaseSettingsModule

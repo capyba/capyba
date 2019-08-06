@@ -11,6 +11,10 @@ gem 'activesupport', '>= 4.1.11'
 gem 'faraday', '~> 0.15.4' # doc
 gem 'httparty', '~> 0.17.0'
 
+# --- Browser --- #
+gem 'browser', '~> 2.6', '>= 2.6.1'
+gem 'user_agent_parser', '~> 2.5', '>= 2.5.1'
+
 # --- Code Quality --- #
 gem 'rubocop', '~> 0.71.0'
 gem 'rubycritic', '~> 4.1'
