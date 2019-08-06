@@ -2,9 +2,7 @@
 
 require_relative 'dotenv'
 
-###
 # @description: Login Module Env Catcher
-###
 module LoginModule
   extend EnvironmentModule
 
@@ -13,10 +11,10 @@ module LoginModule
   Dotenv.require_keys(%w[LOGIN_USER LOGIN_PASS])
 
   def username
-    check_env_keys('LOGIN_USER', 'x')
+    check_env_keys('LOGIN_USER', '')
   end
 
   def password
-    check_env_keys('LOGIN_PASS', 'x')
+    check_env_keys('LOGIN_PASS', '')
   end
 end

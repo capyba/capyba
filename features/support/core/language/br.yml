@@ -3,3 +3,5 @@ br:
     error_message:
       driver:
         unsupported: 'O driver de Banco de Dados informado não é suportado.'
+      query:
+        execution: 'Algo de errado ocorreu ao executar a query'

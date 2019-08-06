@@ -2,9 +2,7 @@
 
 require 'capybara/dsl'
 
-###
-# Helpers Module
-###
+# @description Helpers Module
 module WaitHelper
   include Capybara::DSL
 

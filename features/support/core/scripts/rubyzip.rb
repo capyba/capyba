@@ -45,6 +45,3 @@ class RubyZip
     zipfile.add(zipfile_path, disk_file_path)
   end
 end
-
-# zf = ZipFileGenerator.new(directory_to_zip, output_file)
-# zf.write()

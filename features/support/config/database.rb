@@ -2,9 +2,7 @@
 
 require_relative 'dotenv'
 
-###
 # @description: Database Module Env Catcher
-###
 module DatabaseModule
   extend EnvironmentModule
 

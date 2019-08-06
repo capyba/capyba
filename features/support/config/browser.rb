@@ -4,9 +4,7 @@ require 'necromancer'
 
 require_relative 'dotenv'
 
-###
 # @description: Browser Module Env Catcher
-###
 module BrowserModule
   extend EnvironmentModule
 

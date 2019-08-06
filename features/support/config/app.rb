@@ -2,9 +2,7 @@
 
 require_relative 'dotenv'
 
-###
 # @description: App Module Env Catcher
-###
 module AppModule
   extend EnvironmentModule
 

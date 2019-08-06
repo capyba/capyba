@@ -13,7 +13,6 @@ gem 'httparty', '~> 0.17.0'
 
 # --- Browser --- #
 gem 'browser', '~> 2.6', '>= 2.6.1'
-gem 'user_agent_parser', '~> 2.5', '>= 2.5.1'
 
 # --- Code Quality --- #
 gem 'rubocop', '~> 0.71.0'
@@ -112,7 +111,6 @@ gem 'rspec', '~> 3.8' # 2018
 gem 'rspec-core', '~> 3.8', '>= 3.8.2'
 gem 'rspec-expectations', '~> 3.8', '>= 3.8.4'
 gem 'selenium-webdriver', '~> 3.142', '>= 3.142.3'
-# gem 'webdrivers', '~> 4.1', '>= 4.1.2'
 
 # --- Tools --- #
 gem 'countries', '~> 3.0' # 2018

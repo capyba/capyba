@@ -2,9 +2,7 @@
 
 require 'dotenv'
 
-###
 # @description: Environment Module Dotenv Loader
-###
 module EnvironmentModule
   module_function
 

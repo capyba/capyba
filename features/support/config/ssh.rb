@@ -2,9 +2,7 @@
 
 require_relative 'dotenv'
 
-###
 # @description: SSH Module Env Catcher
-###
 module SSHModule
   extend EnvironmentModule
 

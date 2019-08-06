@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-require 'browser'
-
 Before do
+  # Get browser's user agent
+  @user_agent = page.driver.execute_script('return navigator.userAgent')
+
+  # Maximize the browser
   page.driver.browser.manage.window.maximize
-  @ua = page.driver.execute_script('return navigator.userAgent')
-  browser = Browser.new(@ua)
-  p browser.platform
+
+  # Pages
   @login_page = LoginPage.new
 end

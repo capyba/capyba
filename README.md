@@ -42,6 +42,13 @@ bundle install
 
 In the root folder there is a *.env* file in which you should enter the Environment variables configuration.
 
+Example of zipping usage:
+
+```
+zf = ZipFileGenerator.new(directory_to_zip, output_file)
+zf.write()
+```
+
 ## Environment Keys
 
 You can check all required and optional Environment `Keys` available [here](https://github.com/capyba/capyba/#).

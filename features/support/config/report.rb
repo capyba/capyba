@@ -2,9 +2,7 @@
 
 require_relative 'dotenv'
 
-###
 # @description: Report Module Env Catcher
-###
 module ReportModule
   extend EnvironmentModule
 

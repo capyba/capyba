@@ -1,5 +1,11 @@
 # Changelog
 
+0.1.0 - Aug 06, 2019
+
+* Alpha Release
+
+[Full Changelog](https://github.com/capyba/capyba/compare/v0.0.5...v0.0.6)
+
 0.0.5 - Jul 19, 2019
 
 * Add TTY Gems
