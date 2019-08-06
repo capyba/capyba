@@ -4,13 +4,13 @@
 
 * Adjusts of the feature file example
 
-[Full Changelog](https://github.com/capyba/capyba/compare/v0.0.6...v0.0.7)
+[Full Changelog](https://github.com/capyba/capyba/compare/v0.1.0...v0.1.1)
 
 0.1.0 - Aug 06, 2019
 
 * Alpha Release
 
-[Full Changelog](https://github.com/capyba/capyba/compare/v0.0.5...v0.0.6)
+[Full Changelog](https://github.com/capyba/capyba/compare/v0.0.5...v0.1.0)
 
 0.0.5 - Jul 19, 2019
 
