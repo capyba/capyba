@@ -1,15 +1,16 @@
 Feature: Google
   In order to test if Google Search is working
   As a visitor
-  I want to access the page
+  The user wants to access the Google page search
+
+  @search
+  Scenario: Visit Google Search Page
+    Given the browser is at the Google search page
+    When the user searches for 'Github'
+    Then web page links for 'Github' are shown
 
   @login
-  Scenario: Visit Google Search Page
-    Given I visit 'https://www.google.com'
-    When I search for 'Github'
-    Then the result is shown
-
   Scenario: Login Google
-    Given I visit 'https://www.google.com'
-    When I enter my credentials
+    Given the browser is at the Google search page
+    When the user enters its credentials
     Then the login is done

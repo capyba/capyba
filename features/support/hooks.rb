@@ -7,6 +7,9 @@ Before do
   # Maximize the browser
   page.driver.browser.manage.window.maximize
 
-  # Pages
+  @home_page = Home.new
+end
+
+Before('@login') do
   @login_page = LoginPage.new
 end

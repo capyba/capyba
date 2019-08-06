@@ -1,5 +1,11 @@
 # Changelog
 
+0.1.1 - Aug 06, 2019
+
+* Adjusts of the feature file example
+
+[Full Changelog](https://github.com/capyba/capyba/compare/v0.0.6...v0.0.7)
+
 0.1.0 - Aug 06, 2019
 
 * Alpha Release
