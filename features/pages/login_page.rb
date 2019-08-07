@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'bcrypt'
 require 'capybara/dsl'
 
 require_relative File.expand_path('features/support/config/login')

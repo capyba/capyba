@@ -9,7 +9,6 @@ require_relative File.expand_path('features/support/config/locale')
 # @description: Database Class
 class Database
   include DatabaseSettingsModule
-  include DatabaseMSSQLSettingsModule
 
   def initialize
     @driver = DatabaseSettingsModule.driver
