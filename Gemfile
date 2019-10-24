@@ -20,6 +20,10 @@ gem 'jwt', '~> 2.2', '>= 2.2.1'
 # Simple HTTP and REST client for Ruby, inspired by microframework syntax for specifying actions. (https://github.com/rest-client/rest-client)
 gem 'rest-client', '~> 2.1'
 
+# --- APK --- #
+# Teardown tool for mobile app(ipa/apk), analysis metedata like version, name, icon (http://github.com/icyleaf/app-info)
+gem 'app-info', '~> 1.1', '>= 1.1.2'
+
 # --- Browser --- #
 # Do some browser detection with Ruby. (http://github.com/fnando/browser)
 gem 'browser', '~> 2.6', '>= 2.6.1'
@@ -64,6 +68,10 @@ gem 'tiny_tds', '~> 2.1', '>= 2.1.2' # 2018
 gem 'pry', '~> 0.12.2' # 2013
 # Fast debugging with Pry. (https://github.com/deivid-rodriguez/pry-byebug)
 gem 'pry-byebug', '~> 3.7'
+
+# --- Documentation --- #
+# Cucumber Features in YARD (http://github.com/burtlo/yard-cucumber)
+gem 'yard-cucumber', '~> 4.0'
 
 # --- Email --- #
 # This gem provides a ruby language library for working with and validating email addresses. By default, it validates against conventional usage, the format preferred for user email addresses. It can be configured to validate against RFC “Standard” formats, common email service provider formats, and perform DNS validation. (https://github.com/afair/email_address)
@@ -112,7 +120,8 @@ gem 'faker', '~> 1.9', '>= 1.9.3'
 # --- Images --- #
 # Read EXIF from JPEG and TIFF images (http://github.com/remvee/exifr/)
 gem 'exifr', '~> 1.3', '>= 1.3.6'
-
+# FastImage - Image info fast (http://github.com/sdsykes/fastimage)
+gem 'fastimage', '~> 2.1', '>= 2.1.7'
 # --- Internationalization --- #
 # New wave Internationalization support for Ruby (https://github.com/ruby-i18n/i18n)
 gem 'i18n', '~> 1.6'
@@ -178,6 +187,8 @@ gem 'fuubar', '~> 2.4', '>= 2.4.1'
 gem 'highline', '~> 2.0', '>= 2.0.2' # doc
 # Optimist is a commandline option parser for Ruby that just gets out of your way. (http://manageiq.github.io/optimist/)
 gem 'optimist', '~> 3.0' # 2018
+# Simple Lightweight Option Parsing (http://github.com/leejarvis/slop)
+gem 'slop', '~> 4.7'
 # Simple, feature rich ascii table generation library (https://github.com/tj/terminal-table)
 gem 'terminal-table', '~> 1.8' # doc # 2017
 # A beautiful and powerful interactive command line prompt. (https://piotrmurach.github.io/tty)
@@ -256,3 +267,14 @@ gem 'ffi', '~> 1.11', '>= 1.11.1' if Gem.win_platform? # required by screen-reco
 # --- XML --- #
 # Builders for MarkUp. (http://onestepback.org)
 gem 'builder', '~> 3.2', '>= 3.2.3' # doc # 2017
+
+# --- APPIUM --- #
+# Appium Ruby Console (https://github.com/appium/ruby_console)
+gem 'appium_console'
+# Ruby library for Appium (https://github.com/appium/ruby_lib)
+gem 'appium_lib'
+# Ruby/EventMachine library (http://rubyeventmachine.com)
+gem 'eventmachine', platform: :ruby
+# gem 'eventmachine', '1.2.7', git: 'https://github.com/eventmachine/eventmachine.git', tag: 'v1.2.7'
+
+# 222607321 protocolo
