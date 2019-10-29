@@ -99,7 +99,7 @@ gem 'net-sftp', '~> 2.1', '>= 2.1.2' # 2018
 # Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser
 gem 'nokogiri', '~> 1.10', '>= 1.10.3' # doc
 # rubyzip is a ruby module for reading and writing zip files (http://github.com/rubyzip/rubyzip)
-gem 'rubyzip', '~> 1.2', '>= 1.2.3'
+gem 'rubyzip', '~> 1.3'
 # Windows Directory Monitor (WDM) is a threaded directories monitor for Windows. (https://github.com/Maher4Ever/wdm)
 gem 'wdm', '>= 0.1.0' if Gem.win_platform? # listen gem
 
