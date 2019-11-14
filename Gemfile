@@ -122,11 +122,13 @@ gem 'faker', '~> 1.9', '>= 1.9.3'
 gem 'exifr', '~> 1.3', '>= 1.3.6'
 # FastImage - Image info fast (http://github.com/sdsykes/fastimage)
 gem 'fastimage', '~> 2.1', '>= 2.1.7'
+# Fast image resizer (https://github.com/mtgrosser/rszr)
+gem 'rszr', '~> 0.5.2'
+
 # --- Internationalization --- #
 # New wave Internationalization support for Ruby (https://github.com/ruby-i18n/i18n)
 gem 'i18n', '~> 1.6'
-# Fast image resizer (https://github.com/mtgrosser/rszr)
-gem 'rszr', '~> 0.5.2'
+
 
 # --- Installer --- #
 # Thor is a toolkit for building powerful command-line interfaces. (http://whatisthor.com/)
