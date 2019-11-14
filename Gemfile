@@ -125,6 +125,8 @@ gem 'fastimage', '~> 2.1', '>= 2.1.7'
 # --- Internationalization --- #
 # New wave Internationalization support for Ruby (https://github.com/ruby-i18n/i18n)
 gem 'i18n', '~> 1.6'
+# Fast image resizer (https://github.com/mtgrosser/rszr)
+gem 'rszr', '~> 0.5.2'
 
 # --- Installer --- #
 # Thor is a toolkit for building powerful command-line interfaces. (http://whatisthor.com/)
@@ -278,3 +280,6 @@ gem 'eventmachine', platform: :ruby
 # gem 'eventmachine', '1.2.7', git: 'https://github.com/eventmachine/eventmachine.git', tag: 'v1.2.7'
 
 # 222607321 protocolo
+
+# factory_bot provides a framework and DSL for defining and using model instance factories. (https://github.com/thoughtbot/factory_bot)
+gem 'factory_bot', '~> 5.1', '>= 5.1.1'
