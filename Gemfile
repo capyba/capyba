@@ -279,7 +279,5 @@ gem 'appium_lib'
 gem 'eventmachine', platform: :ruby
 # gem 'eventmachine', '1.2.7', git: 'https://github.com/eventmachine/eventmachine.git', tag: 'v1.2.7'
 
-# 222607321 protocolo
-
 # factory_bot provides a framework and DSL for defining and using model instance factories. (https://github.com/thoughtbot/factory_bot)
 gem 'factory_bot', '~> 5.1', '>= 5.1.1'
