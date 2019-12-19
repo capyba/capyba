@@ -176,7 +176,7 @@ gem 'strings', '~> 0.1.5' # doc
 # Simple and easy way to know if you're on windows or not (reliably), as well as how many bits the OS is, etc. (http://github.com/rdp/os)
 gem 'os', '~> 1.0', '>= 1.0.1'
 # a modular Ruby webserver interface (https://rack.github.io/)
-gem 'rack', '~> 2.0', '>= 2.0.7'
+gem 'rack', '~> 2.0'
 # Rake is a Make-like program implemented in Ruby (https://github.com/ruby/rake)
 gem 'rake', '~> 12.3', '>= 12.3.2'
 # Perform simple syntax highlighting. (https://github.com/dblock/syntax)
