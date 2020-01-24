@@ -24,6 +24,9 @@ gem 'rest-client', '~> 2.1'
 # Teardown tool for mobile app(ipa/apk), analysis metedata like version, name, icon (http://github.com/icyleaf/app-info)
 gem 'app-info', '~> 1.1', '>= 1.1.2'
 
+# --- Audit --- #
+gem 'bundler-audit', '~> 0.6.1'
+
 # --- Browser --- #
 # Do some browser detection with Ruby. (http://github.com/fnando/browser)
 gem 'browser', '~> 2.6', '>= 2.6.1'
@@ -283,3 +286,5 @@ gem 'eventmachine', platform: :ruby
 
 # factory_bot provides a framework and DSL for defining and using model instance factories. (https://github.com/thoughtbot/factory_bot)
 gem 'factory_bot', '~> 5.1', '>= 5.1.1'
+
+gem 'show_me_the_cookies'
