@@ -287,4 +287,10 @@ gem 'eventmachine', platform: :ruby
 # factory_bot provides a framework and DSL for defining and using model instance factories. (https://github.com/thoughtbot/factory_bot)
 gem 'factory_bot', '~> 5.1', '>= 5.1.1'
 
+<<<<<<< HEAD
 gem 'show_me_the_cookies'
+=======
+gem 'http-cookie', '~> 1.0', '>= 1.0.3'
+gem 'jbuilder', '~> 2.9', '>= 2.9.1'
+gem 'redis', '~> 4.1', '>= 4.1.3'
+>>>>>>> 63b04c7d3499fde624def6f00c5cd76c1740c13c
